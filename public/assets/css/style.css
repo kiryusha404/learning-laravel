@@ -1,0 +1,7 @@
+@font-face {
+    font-family: Mukta;
+    src: url("/assets/fonts/EkMuktaBold-Kw7e.ttf");
+}
+body {
+    font-family: Mukta;
+}
