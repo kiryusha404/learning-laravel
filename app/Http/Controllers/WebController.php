@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facade\DB;
+use Illuminate\Support\Facades\DB;
 
 class WebController extends Controller
 {
@@ -13,9 +13,9 @@ class WebController extends Controller
     }
 
     public function products() {
-        $products = DB::insert("SELECT * FROM products WHERE count > ?", [0]);
+        $products = DB::select("SELECT * FROM products WHERE count > ?", [0]);
         return view('products', ['products'=>$products]); // товарыстраница
-        
+
     }
 
     public function product($id) {
