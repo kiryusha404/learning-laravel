@@ -8,7 +8,9 @@ use Illuminate\Support\Facades\DB;
 class WebController extends Controller
 {
     public function index() {
-        return view('index'); // главнаястраница
+
+        $products = DB::select("SELECT * FROM `products` ORDER BY id DESC limit ?", [5]);
+        return view('index', ['products'=>$products]); // главнаястраница
 
     }
 
