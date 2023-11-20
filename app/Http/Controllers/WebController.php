@@ -21,7 +21,8 @@ class WebController extends Controller
     }
 
     public function product($id) {
-        return view('product'); // товарстраница
+        $product = DB::select("SELECT * FROM products WHERE id = ?", [$id]);
+        return view('product', ['product'=>$product]); // товарстраница
 
     }
     public function contacts() {

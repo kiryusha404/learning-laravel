@@ -14,7 +14,7 @@
                         <div class="card-body">
                             <h5 class="card-title">{{ $product -> name }}</h5>
                             <p class="card-text">{{ $product -> price }} руб.</p>
-                            <a href="product/{{$product -> id}}" class="btn btn-primary">Перейти</a>
+                            <a href="{{ route('product', ['id' => $product -> id]) }}" class="btn btn-primary">Перейти</a>
                         </div>
 
                     </div>

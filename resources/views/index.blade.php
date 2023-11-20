@@ -20,10 +20,9 @@
         <div class="carousel-inner">
             @foreach($products as $product)
             <div class="carousel-item {{ $loop->first ? 'active' : '' }}">
-                <img src="assets/img/{{$product->img}}" class="d-block w-100" alt="...">
+                <img src="assets/img/{{$product->img}}" class="d-block w-100 img_slider img-fluid" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>{{$product->name}}</h5>
                 </div>
             </div>
             @endforeach
