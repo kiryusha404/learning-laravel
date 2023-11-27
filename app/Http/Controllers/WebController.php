@@ -22,7 +22,7 @@ class WebController extends Controller
 
     public function product($id) {
         $product = DB::select("SELECT * FROM products WHERE id = ?", [$id]);
-        return view('product', ['product'=>$product]); // товарстраница
+        return view('product', ['products'=>$product]); // товарстраница
 
     }
     public function contacts() {
